@@ -1,59 +1,15 @@
-<p align="center">
-  <img src="assets/TauricResearch.png" style="width: 60%; height: auto;">
-</p>
-
-<div align="center" style="line-height: 1;">
-  <a href="https://arxiv.org/abs/2412.20138" target="_blank"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2412.20138-B31B1B?logo=arxiv"/></a>
-  <a href="https://discord.com/invite/hk9PGKShPK" target="_blank"><img alt="Discord" src="https://img.shields.io/badge/Discord-TradingResearch-7289da?logo=discord&logoColor=white&color=7289da"/></a>
-  <a href="./assets/wechat.png" target="_blank"><img alt="WeChat" src="https://img.shields.io/badge/WeChat-TauricResearch-brightgreen?logo=wechat&logoColor=white"/></a>
-  <a href="https://x.com/TauricResearch" target="_blank"><img alt="X Follow" src="https://img.shields.io/badge/X-TauricResearch-white?logo=x&logoColor=white"/></a>
-  <br>
-  <a href="https://github.com/TauricResearch/" target="_blank"><img alt="Community" src="https://img.shields.io/badge/Join_GitHub_Community-TauricResearch-14C290?logo=discourse"/></a>
-</div>
-
-<div align="center">
-  <!-- Keep these links. Translations will automatically update with the README. -->
-  <a href="https://www.readme-i18n.com/TauricResearch/StaffAgents?lang=de">Deutsch</a> |
-  <a href="https://www.readme-i18n.com/TauricResearch/StaffAgents?lang=es">Español</a> |
-  <a href="https://www.readme-i18n.com/TauricResearch/StaffAgents?lang=fr">français</a> |
-  <a href="https://www.readme-i18n.com/TauricResearch/StaffAgents?lang=ja">日本語</a> |
-  <a href="https://www.readme-i18n.com/TauricResearch/StaffAgents?lang=ko">한국어</a> |
-  <a href="https://www.readme-i18n.com/TauricResearch/StaffAgents?lang=pt">Português</a> |
-  <a href="https://www.readme-i18n.com/TauricResearch/StaffAgents?lang=ru">Русский</a> |
-  <a href="https://www.readme-i18n.com/TauricResearch/StaffAgents?lang=zh">中文</a>
-</div>
-
----
-
+````markdown
 # StaffAgents: Multi-Agents LLM Organizational Intelligence Framework
 
-> 🎉 **StaffAgents** officially released! We have received numerous inquiries about the work, and we would like to express our thanks for the enthusiasm in our community.
+> StaffAgents officially released! We have received numerous inquiries about the work, and we would like to express our thanks for the enthusiasm in our community.
 >
 > So we decided to fully open-source the framework. Looking forward to building impactful projects with you!
 
-<div align="center">
-<a href="https://www.star-history.com/#TauricResearch/StaffAgents&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=TauricResearch/StaffAgents&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=TauricResearch/StaffAgents&type=Date" />
-   <img alt="StaffAgents Star History" src="https://api.star-history.com/svg?repos=TauricResearch/StaffAgents&type=Date" style="width: 80%; height: auto;" />
- </picture>
-</a>
-</div>
-
-<div align="center">
-
 🚀 [StaffAgents](#staffagents-framework) | ⚡ [Installation & CLI](#installation-and-cli) | 🎬 [Demo](https://www.youtube.com/watch?v=90gr5lwjIho) | 📦 [Package Usage](#staffagents-package) | 🤝 [Contributing](#contributing) | 📄 [Citation](#citation)
-
-</div>
 
 ## StaffAgents Framework
 
 StaffAgents is a multi-agent collaboration framework that mirrors the dynamics of real-world strategic planning teams. By deploying specialized LLM-powered analysts—from strategic planners and operational reviewers to marketing specialists and risk scouts—the platform collaboratively evaluates organizational context and surfaces coordinated recommendations. Moreover, these agents engage in dynamic discussions to pinpoint the optimal course of action for leadership.
-
-<p align="center">
-  <img src="assets/schema.png" style="width: 100%; height: auto;">
-</p>
 
 > StaffAgents framework is designed for research purposes. Outcomes may vary based on the chosen backbone language models, model temperature, time horizons, the quality of data, and other non-deterministic factors. Adapt the framework to your internal review policies before using it in production environments.
 
@@ -65,31 +21,15 @@ Our framework decomposes complex organizational questions into specialized roles
 - **Marketing & Customer Analyst**: Aggregates sentiment, feedback, and market conversations to surface customer-centric insights.
 - **Risk & External Analyst**: Tracks regulatory shifts, partner ecosystems, and macro trends to flag external risks and opportunities.
 
-<p align="center">
-  <img src="assets/analyst.png" width="100%" style="display: inline-block; margin: 0 2%;">
-</p>
-
 ### Researcher Team
 - Comprises both bullish and bearish researchers who critically assess the insights provided by the Analyst Team. Through structured debates, they balance potential gains against inherent risks.
-
-<p align="center">
-  <img src="assets/researcher.png" width="70%" style="display: inline-block; margin: 0 2%;">
-</p>
 
 ### Staff Coordinator Agent
 - Composes reports from the analysts and researchers to craft unified action plans. It aligns stakeholders on next steps based on comprehensive organizational intelligence.
 
-<p align="center">
-  <img src="assets/trader.png" width="70%" style="display: inline-block; margin: 0 2%;">
-</p>
-
 ### Risk Management and Executive Review
 - Continuously evaluates operational risk by assessing volatility in key metrics, stakeholder sentiment, and external dependencies. The risk management team refines proposed actions before they move forward.
 - The Executive Review function approves or redirects the coordination plan. When approved, recommendations become ready for implementation.
-
-<p align="center">
-  <img src="assets/risk.png" width="70%" style="display: inline-block; margin: 0 2%;">
-</p>
 
 ## Installation and CLI
 
@@ -97,69 +37,58 @@ Our framework decomposes complex organizational questions into specialized roles
 
 Clone StaffAgents:
 ```bash
-git clone https://github.com/TauricResearch/StaffAgents.git
+git clone [https://github.com/theerayutbo/StaffAgents.git](https://github.com/theerayutbo/StaffAgents.git)
 cd StaffAgents
-```
+````
 
 Create a virtual environment in any of your favorite environment managers:
+
 ```bash
 conda create -n staffagents python=3.13
 conda activate staffagents
 ```
 
 Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
 ### Required APIs
 
-StaffAgents supports multiple LLM providers out of the box. At minimum you will need credentials for the provider(s) you configure:
-
-- **OpenAI / OpenRouter / Ollama-compatible endpoints** – set `OPENAI_API_KEY`. For OpenRouter you should also set `OPENROUTER_API_KEY` and update `backend_url` accordingly.
-- **Anthropic** – set `ANTHROPIC_API_KEY`.
-- **Google (Gemini)** – set `GOOGLE_API_KEY`.
-
-Finance-specific data is optional. When available, StaffAgents automatically blends Google search and LLM-synthesised intelligence with Alpha Vantage for explicit finance requests. Set the Alpha Vantage key if you want that fallback:
+You will need the OpenAI API for all the agents. An [Alpha Vantage API](https://www.alphavantage.co/support/#api-key) key is optional—StaffAgents only reaches for Alpha Vantage when a prompt explicitly requests finance-specific data, otherwise it relies on Google and LLM-sourced intelligence by default.
 
 ```bash
-export OPENAI_API_KEY=$YOUR_OPENAI_API_KEY          # or the equivalent for your chosen provider
-export GOOGLE_API_KEY=$YOUR_GOOGLE_API_KEY          # required when llm_provider="google"
-export ANTHROPIC_API_KEY=$YOUR_ANTHROPIC_API_KEY    # required when llm_provider="anthropic"
+export OPENAI_API_KEY=$YOUR_OPENAI_API_KEY
 export ALPHA_VANTAGE_API_KEY=$YOUR_ALPHA_VANTAGE_API_KEY
 ```
 
-Alternatively, you can create a `.env` file in the project root with your API keys and call `load_dotenv()` (already done inside the CLI and `main.py`).
+Alternatively, you can create a `.env` file in the project root with your API keys (see `.env.example` for reference):
 
-**Note:** We are happy to partner with Alpha Vantage to provide robust API support for StaffAgents. You can get a free AlphaVantage API [here](https://www.alphavantage.co/support/#api-key); StaffAgents-sourced requests also have increased rate limits to 60 requests per minute with no daily limits. In this reimagined organisational workflow, Google and LLM-synthesised sources are the primary defaults, and Alpha Vantage is consulted only when a question clearly requires financial context. You can fine-tune this behaviour via the data vendor settings in `staffagents/default_config.py`.
+```bash
+cp .env.example .env
+# Edit .env with your actual API keys
+```
+
+**Note:** We are happy to partner with Alpha Vantage to provide robust API support for StaffAgents. You can get a free AlphaVANTAGE API [here](https://www.alphavantage.co/support/#api-key); StaffAgents-sourced requests also have increased rate limits to 60 requests per minute with no daily limits. In this reimagined organisational workflow, Google and LLM-synthesised sources are the primary defaults, and Alpha Vantage is consulted only when a question clearly requires financial context. You can fine-tune this behaviour via the data vendor settings in `staffagents/default_config.py`.
 
 ### CLI Usage
 
 You can also try out the CLI directly by running:
+
 ```bash
 python -m cli.main
 ```
+
 You will see a screen where you can select your desired tickers, date, LLMs, research depth, etc.
 
-<p align="center">
-  <img src="assets/cli/cli_init.png" width="100%" style="display: inline-block; margin: 0 2%;">
-</p>
-
 An interface will appear showing results as they load, letting you track the agent's progress as it runs.
-
-<p align="center">
-  <img src="assets/cli/cli_news.png" width="100%" style="display: inline-block; margin: 0 2%;">
-</p>
-
-<p align="center">
-  <img src="assets/cli/cli_transaction.png" width="100%" style="display: inline-block; margin: 0 2%;">
-</p>
 
 ## StaffAgents Package
 
 ### Implementation Details
 
-We built StaffAgents with LangGraph to ensure flexibility and modularity. By default the framework runs on OpenAI-compatible endpoints using `o4-mini` for deep thinking and `gpt-4o-mini` for fast thinking so the system stays responsive while keeping costs under control. You can switch to Anthropic, Google Gemini, OpenRouter, or a local Ollama endpoint by updating the configuration.
+We built StaffAgents with LangGraph to ensure flexibility and modularity. We utilize `o1-preview` and `gpt-4o` as our deep thinking and fast thinking LLMs for our experiments. However, for testing purposes, we recommend you use `o4-mini` and `gpt-4.1-mini` to save on costs as our framework makes **lots of** API calls.
 
 ### Python Usage
 
@@ -169,7 +98,6 @@ To use StaffAgents inside your code, you can import the lightweight alias and in
 from staffagents import StaffAgentsGraph
 from staffagents.default_config import DEFAULT_CONFIG
 
-# Base usage sticks with the defaults defined in default_config.py
 ta = StaffAgentsGraph(debug=True, config=DEFAULT_CONFIG.copy())
 
 # forward propagate
@@ -177,26 +105,27 @@ _, decision = ta.propagate("Customer Experience Initiative", "2025-11-04")
 print(decision)
 ```
 
-You can also adjust the default configuration to set your own choice of LLMs, debate rounds, or even switch providers.
+You can also adjust the default configuration to set your own choice of LLMs, debate rounds, etc.
 
 ```python
 from staffagents import StaffAgentsGraph
 from staffagents.default_config import DEFAULT_CONFIG
 
-# Create a custom config for OpenAI-compatible endpoints
+# Create a custom config
 config = DEFAULT_CONFIG.copy()
-config["deep_think_llm"] = "gpt-4o-mini"  # Swap in a different model
-config["quick_think_llm"] = "gpt-4o-mini"
-config["max_debate_rounds"] = 2
+config["deep_think_llm"] = "gpt-4.1-nano"  # Use a different model
+config["quick_think_llm"] = "gpt-4.1-nano"  # Use a different model
+config["max_debate_rounds"] = 1  # Increase debate rounds
 
-# Configure data vendors (defaults blend Google + LLM analysis, then fall back to finance APIs)
+# Configure data vendors (default uses yfinance with Google/LLM-first fundamentals & news)
 config["data_vendors"] = {
-    "core_stock_apis": "yfinance",                 # Options: yfinance, alpha_vantage, local
-    "technical_indicators": "yfinance",            # Options: yfinance, alpha_vantage, local
-    "fundamental_data": "openai,alpha_vantage",    # Prefer LLM summaries, fall back to Alpha Vantage
-    "news_data": "google,openai,alpha_vantage",    # Start with Google + LLM context
+    "core_stock_apis": "yfinance",          # Options: yfinance, alpha_vantage, local
+    "technical_indicators": "yfinance",      # Options: yfinance, alpha_vantage, local
+    "fundamental_data": "openai,alpha_vantage",      # Options: openai, alpha_vantage, local
+    "news_data": "google,openai,alpha_vantage",        # Options: openai, alpha_vantage, google, local
 }
 
+# Initialize with custom config
 ta = StaffAgentsGraph(debug=True, config=config)
 
 # forward propagate
@@ -204,32 +133,21 @@ _, decision = ta.propagate("Customer Experience Initiative", "2025-11-04")
 print(decision)
 ```
 
-Switching to Gemini is equally straightforward—just point the provider to `google` and provide the Gemini models you want to use.
-
-```python
-config = DEFAULT_CONFIG.copy()
-config["llm_provider"] = "google"
-config["deep_think_llm"] = "gemini-1.5-pro"
-config["quick_think_llm"] = "gemini-1.5-flash"
-
-ta = StaffAgentsGraph(debug=True, config=config)
-```
-
-> The default configuration uses yfinance for stock price and technical data, combines Google search with LLM synthesis for fundamental and news analysis, and falls back to Alpha Vantage only when finance-specific answers are requested. For production use or if you encounter rate limits, consider upgrading to [Alpha Vantage Premium](https://www.alphavantage.co/premium/) for more stable and reliable data access. For offline experimentation, there's a local data vendor option that uses our **Tauric TradingDB**, a curated dataset for backtesting, though this is still in development. We're currently refining this dataset and plan to release it soon alongside our upcoming projects. Stay tuned!
+> The default configuration uses yfinance for stock price and technical data, combines Google search with LLM synthesis for fundamental and news analysis, and falls back to Alpha Vantage only when finance-specific answers are requested. For production use or if you encounter rate limits, consider upgrading to [Alpha Vantage Premium](https://www.alphavantage.co/premium/) for more stable and reliable data access. For offline experimentation, there's a local data vendor option that uses our **Tauric TradingDB**, a curated dataset for backtesting, though this is still in development. We're currently refining this dataset and plan to release it soon alongside our upcoming projects. Stay tuned\!
 
 You can view the full list of configurations in `staffagents/default_config.py`.
 
 ## Contributing
 
-We welcome contributions from the community! Whether it's fixing a bug, improving documentation, or suggesting a new feature, your input helps make this project better. If you are interested in this line of research, please consider joining our open-source financial AI research community [Tauric Research](https://tauric.ai/).
+This project I get inspiration from the projecy of the open-source financial AI research community [Tauric Research](https://tauric.ai/).
 
 ## Citation
 
-Please reference our work if you find *StaffAgents* provides you with some help :)
+This project is inspired by and builds upon the framework presented in the original **tradingagents** paper. If you find the code in this repository helpful, please cite the original authors' work:
 
 ```
-@misc{xiao2025staffagentsmultiagentsllmorganizational,
-      title={StaffAgents: Multi-Agents LLM Organizational Intelligence Framework},
+@misc{xiao2025tradingagentsmultiagentsllmfinancial,
+      title={TradingAgents: Multi-Agents LLM Financial Trading Framework}, 
       author={Yijia Xiao and Edward Sun and Di Luo and Wei Wang},
       year={2025},
       eprint={2412.20138},
