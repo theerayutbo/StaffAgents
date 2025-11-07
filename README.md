@@ -13,57 +13,57 @@
 
 <div align="center">
   <!-- Keep these links. Translations will automatically update with the README. -->
-  <a href="https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=de">Deutsch</a> | 
-  <a href="https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=es">Español</a> | 
-  <a href="https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=fr">français</a> | 
-  <a href="https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=ja">日本語</a> | 
-  <a href="https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=ko">한국어</a> | 
-  <a href="https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=pt">Português</a> | 
-  <a href="https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=ru">Русский</a> | 
-  <a href="https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=zh">中文</a>
+  <a href="https://www.readme-i18n.com/TauricResearch/StaffAgents?lang=de">Deutsch</a> |
+  <a href="https://www.readme-i18n.com/TauricResearch/StaffAgents?lang=es">Español</a> |
+  <a href="https://www.readme-i18n.com/TauricResearch/StaffAgents?lang=fr">français</a> |
+  <a href="https://www.readme-i18n.com/TauricResearch/StaffAgents?lang=ja">日本語</a> |
+  <a href="https://www.readme-i18n.com/TauricResearch/StaffAgents?lang=ko">한국어</a> |
+  <a href="https://www.readme-i18n.com/TauricResearch/StaffAgents?lang=pt">Português</a> |
+  <a href="https://www.readme-i18n.com/TauricResearch/StaffAgents?lang=ru">Русский</a> |
+  <a href="https://www.readme-i18n.com/TauricResearch/StaffAgents?lang=zh">中文</a>
 </div>
 
 ---
 
-# TradingAgents: Multi-Agents LLM Financial Trading Framework 
+# StaffAgents: Multi-Agents LLM Organizational Intelligence Framework
 
-> 🎉 **TradingAgents** officially released! We have received numerous inquiries about the work, and we would like to express our thanks for the enthusiasm in our community.
+> 🎉 **StaffAgents** officially released! We have received numerous inquiries about the work, and we would like to express our thanks for the enthusiasm in our community.
 >
 > So we decided to fully open-source the framework. Looking forward to building impactful projects with you!
 
 <div align="center">
-<a href="https://www.star-history.com/#TauricResearch/TradingAgents&Date">
+<a href="https://www.star-history.com/#TauricResearch/StaffAgents&Date">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=TauricResearch/TradingAgents&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=TauricResearch/TradingAgents&type=Date" />
-   <img alt="TradingAgents Star History" src="https://api.star-history.com/svg?repos=TauricResearch/TradingAgents&type=Date" style="width: 80%; height: auto;" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=TauricResearch/StaffAgents&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=TauricResearch/StaffAgents&type=Date" />
+   <img alt="StaffAgents Star History" src="https://api.star-history.com/svg?repos=TauricResearch/StaffAgents&type=Date" style="width: 80%; height: auto;" />
  </picture>
 </a>
 </div>
 
 <div align="center">
 
-🚀 [TradingAgents](#tradingagents-framework) | ⚡ [Installation & CLI](#installation-and-cli) | 🎬 [Demo](https://www.youtube.com/watch?v=90gr5lwjIho) | 📦 [Package Usage](#tradingagents-package) | 🤝 [Contributing](#contributing) | 📄 [Citation](#citation)
+🚀 [StaffAgents](#staffagents-framework) | ⚡ [Installation & CLI](#installation-and-cli) | 🎬 [Demo](https://www.youtube.com/watch?v=90gr5lwjIho) | 📦 [Package Usage](#staffagents-package) | 🤝 [Contributing](#contributing) | 📄 [Citation](#citation)
 
 </div>
 
-## TradingAgents Framework
+## StaffAgents Framework
 
-TradingAgents is a multi-agent trading framework that mirrors the dynamics of real-world trading firms. By deploying specialized LLM-powered agents: from fundamental analysts, sentiment experts, and technical analysts, to trader, risk management team, the platform collaboratively evaluates market conditions and informs trading decisions. Moreover, these agents engage in dynamic discussions to pinpoint the optimal strategy.
+StaffAgents is a multi-agent collaboration framework that mirrors the dynamics of real-world strategic planning teams. By deploying specialized LLM-powered analysts—from strategic planners and operational reviewers to marketing specialists and risk scouts—the platform collaboratively evaluates organizational context and surfaces coordinated recommendations. Moreover, these agents engage in dynamic discussions to pinpoint the optimal course of action for leadership.
 
 <p align="center">
   <img src="assets/schema.png" style="width: 100%; height: auto;">
 </p>
 
-> TradingAgents framework is designed for research purposes. Trading performance may vary based on many factors, including the chosen backbone language models, model temperature, trading periods, the quality of data, and other non-deterministic factors. [It is not intended as financial, investment, or trading advice.](https://tauric.ai/disclaimer/)
+> StaffAgents framework is designed for research purposes. Outcomes may vary based on the chosen backbone language models, model temperature, time horizons, the quality of data, and other non-deterministic factors. Adapt the framework to your internal review policies before using it in production environments.
 
-Our framework decomposes complex trading tasks into specialized roles. This ensures the system achieves a robust, scalable approach to market analysis and decision-making.
+Our framework decomposes complex organizational questions into specialized roles. This ensures the system achieves a robust, scalable approach to cross-functional analysis and decision-making.
 
 ### Analyst Team
-- Fundamentals Analyst: Evaluates company financials and performance metrics, identifying intrinsic values and potential red flags.
-- Sentiment Analyst: Analyzes social media and public sentiment using sentiment scoring algorithms to gauge short-term market mood.
-- News Analyst: Monitors global news and macroeconomic indicators, interpreting the impact of events on market conditions.
-- Technical Analyst: Utilizes technical indicators (like MACD and RSI) to detect trading patterns and forecast price movements.
+- **Strategic Analyst**: Synthesizes performance indicators, competitive positioning, and long-term opportunities to guide enterprise strategy.
+- **Operational Analyst**: Reviews fundamentals, resource allocation, and process efficiency to highlight execution improvements.
+- **Marketing & Customer Analyst**: Aggregates sentiment, feedback, and market conversations to surface customer-centric insights.
+- **Risk & External Analyst**: Tracks regulatory shifts, partner ecosystems, and macro trends to flag external risks and opportunities.
 
 <p align="center">
   <img src="assets/analyst.png" width="100%" style="display: inline-block; margin: 0 2%;">
@@ -76,16 +76,16 @@ Our framework decomposes complex trading tasks into specialized roles. This ensu
   <img src="assets/researcher.png" width="70%" style="display: inline-block; margin: 0 2%;">
 </p>
 
-### Trader Agent
-- Composes reports from the analysts and researchers to make informed trading decisions. It determines the timing and magnitude of trades based on comprehensive market insights.
+### Staff Coordinator Agent
+- Composes reports from the analysts and researchers to craft unified action plans. It aligns stakeholders on next steps based on comprehensive organizational intelligence.
 
 <p align="center">
   <img src="assets/trader.png" width="70%" style="display: inline-block; margin: 0 2%;">
 </p>
 
-### Risk Management and Portfolio Manager
-- Continuously evaluates portfolio risk by assessing market volatility, liquidity, and other risk factors. The risk management team evaluates and adjusts trading strategies, providing assessment reports to the Portfolio Manager for final decision.
-- The Portfolio Manager approves/rejects the transaction proposal. If approved, the order will be sent to the simulated exchange and executed.
+### Risk Management and Executive Review
+- Continuously evaluates operational risk by assessing volatility in key metrics, stakeholder sentiment, and external dependencies. The risk management team refines proposed actions before they move forward.
+- The Executive Review function approves or redirects the coordination plan. When approved, recommendations become ready for implementation.
 
 <p align="center">
   <img src="assets/risk.png" width="70%" style="display: inline-block; margin: 0 2%;">
@@ -95,16 +95,16 @@ Our framework decomposes complex trading tasks into specialized roles. This ensu
 
 ### Installation
 
-Clone TradingAgents:
+Clone StaffAgents:
 ```bash
-git clone https://github.com/TauricResearch/TradingAgents.git
-cd TradingAgents
+git clone https://github.com/TauricResearch/StaffAgents.git
+cd StaffAgents
 ```
 
 Create a virtual environment in any of your favorite environment managers:
 ```bash
-conda create -n tradingagents python=3.13
-conda activate tradingagents
+conda create -n staffagents python=3.13
+conda activate staffagents
 ```
 
 Install dependencies:
@@ -114,7 +114,7 @@ pip install -r requirements.txt
 
 ### Required APIs
 
-You will need the OpenAI API for all the agents, and [Alpha Vantage API](https://www.alphavantage.co/support/#api-key) for fundamental and news data (default configuration).
+You will need the OpenAI API for all the agents. An [Alpha Vantage API](https://www.alphavantage.co/support/#api-key) key is optional—StaffAgents only reaches for Alpha Vantage when a prompt explicitly requests finance-specific data, otherwise it relies on Google and LLM-sourced intelligence by default.
 
 ```bash
 export OPENAI_API_KEY=$YOUR_OPENAI_API_KEY
@@ -127,7 +127,7 @@ cp .env.example .env
 # Edit .env with your actual API keys
 ```
 
-**Note:** We are happy to partner with Alpha Vantage to provide robust API support for TradingAgents. You can get a free AlphaVantage API [here](https://www.alphavantage.co/support/#api-key), TradingAgents-sourced requests also have increased rate limits to 60 requests per minute with no daily limits. Typically the quota is sufficient for performing complex tasks with TradingAgents thanks to Alpha Vantage’s open-source support program. If you prefer to use OpenAI for these data sources instead, you can modify the data vendor settings in `tradingagents/default_config.py`.
+**Note:** We are happy to partner with Alpha Vantage to provide robust API support for StaffAgents. You can get a free AlphaVantage API [here](https://www.alphavantage.co/support/#api-key); StaffAgents-sourced requests also have increased rate limits to 60 requests per minute with no daily limits. In this reimagined organisational workflow, Google and LLM-synthesised sources are the primary defaults, and Alpha Vantage is consulted only when a question clearly requires financial context. You can fine-tune this behaviour via the data vendor settings in `staffagents/default_config.py`.
 
 ### CLI Usage
 
@@ -151,32 +151,32 @@ An interface will appear showing results as they load, letting you track the age
   <img src="assets/cli/cli_transaction.png" width="100%" style="display: inline-block; margin: 0 2%;">
 </p>
 
-## TradingAgents Package
+## StaffAgents Package
 
 ### Implementation Details
 
-We built TradingAgents with LangGraph to ensure flexibility and modularity. We utilize `o1-preview` and `gpt-4o` as our deep thinking and fast thinking LLMs for our experiments. However, for testing purposes, we recommend you use `o4-mini` and `gpt-4.1-mini` to save on costs as our framework makes **lots of** API calls.
+We built StaffAgents with LangGraph to ensure flexibility and modularity. We utilize `o1-preview` and `gpt-4o` as our deep thinking and fast thinking LLMs for our experiments. However, for testing purposes, we recommend you use `o4-mini` and `gpt-4.1-mini` to save on costs as our framework makes **lots of** API calls.
 
 ### Python Usage
 
-To use TradingAgents inside your code, you can import the `tradingagents` module and initialize a `TradingAgentsGraph()` object. The `.propagate()` function will return a decision. You can run `main.py`, here's also a quick example:
+To use StaffAgents inside your code, you can import the lightweight alias and initialize a `StaffAgentsGraph()` object. The `.propagate()` function will return a decision. You can run `main.py`, here's also a quick example:
 
 ```python
-from tradingagents.graph.trading_graph import TradingAgentsGraph
-from tradingagents.default_config import DEFAULT_CONFIG
+from staffagents import StaffAgentsGraph
+from staffagents.default_config import DEFAULT_CONFIG
 
-ta = TradingAgentsGraph(debug=True, config=DEFAULT_CONFIG.copy())
+ta = StaffAgentsGraph(debug=True, config=DEFAULT_CONFIG.copy())
 
 # forward propagate
-_, decision = ta.propagate("NVDA", "2024-05-10")
+_, decision = ta.propagate("Customer Experience Initiative", "2025-11-04")
 print(decision)
 ```
 
 You can also adjust the default configuration to set your own choice of LLMs, debate rounds, etc.
 
 ```python
-from tradingagents.graph.trading_graph import TradingAgentsGraph
-from tradingagents.default_config import DEFAULT_CONFIG
+from staffagents import StaffAgentsGraph
+from staffagents.default_config import DEFAULT_CONFIG
 
 # Create a custom config
 config = DEFAULT_CONFIG.copy()
@@ -184,25 +184,25 @@ config["deep_think_llm"] = "gpt-4.1-nano"  # Use a different model
 config["quick_think_llm"] = "gpt-4.1-nano"  # Use a different model
 config["max_debate_rounds"] = 1  # Increase debate rounds
 
-# Configure data vendors (default uses yfinance and Alpha Vantage)
+# Configure data vendors (default uses yfinance with Google/LLM-first fundamentals & news)
 config["data_vendors"] = {
     "core_stock_apis": "yfinance",           # Options: yfinance, alpha_vantage, local
     "technical_indicators": "yfinance",      # Options: yfinance, alpha_vantage, local
-    "fundamental_data": "alpha_vantage",     # Options: openai, alpha_vantage, local
-    "news_data": "alpha_vantage",            # Options: openai, alpha_vantage, google, local
+    "fundamental_data": "openai,alpha_vantage",     # Options: openai, alpha_vantage, local
+    "news_data": "google,openai,alpha_vantage",            # Options: openai, alpha_vantage, google, local
 }
 
 # Initialize with custom config
-ta = TradingAgentsGraph(debug=True, config=config)
+ta = StaffAgentsGraph(debug=True, config=config)
 
 # forward propagate
-_, decision = ta.propagate("NVDA", "2024-05-10")
+_, decision = ta.propagate("Customer Experience Initiative", "2025-11-04")
 print(decision)
 ```
 
-> The default configuration uses yfinance for stock price and technical data, and Alpha Vantage for fundamental and news data. For production use or if you encounter rate limits, consider upgrading to [Alpha Vantage Premium](https://www.alphavantage.co/premium/) for more stable and reliable data access. For offline experimentation, there's a local data vendor option that uses our **Tauric TradingDB**, a curated dataset for backtesting, though this is still in development. We're currently refining this dataset and plan to release it soon alongside our upcoming projects. Stay tuned!
+> The default configuration uses yfinance for stock price and technical data, combines Google search with LLM synthesis for fundamental and news analysis, and falls back to Alpha Vantage only when finance-specific answers are requested. For production use or if you encounter rate limits, consider upgrading to [Alpha Vantage Premium](https://www.alphavantage.co/premium/) for more stable and reliable data access. For offline experimentation, there's a local data vendor option that uses our **Tauric TradingDB**, a curated dataset for backtesting, though this is still in development. We're currently refining this dataset and plan to release it soon alongside our upcoming projects. Stay tuned!
 
-You can view the full list of configurations in `tradingagents/default_config.py`.
+You can view the full list of configurations in `staffagents/default_config.py`.
 
 ## Contributing
 
@@ -210,11 +210,11 @@ We welcome contributions from the community! Whether it's fixing a bug, improvin
 
 ## Citation
 
-Please reference our work if you find *TradingAgents* provides you with some help :)
+Please reference our work if you find *StaffAgents* provides you with some help :)
 
 ```
-@misc{xiao2025tradingagentsmultiagentsllmfinancial,
-      title={TradingAgents: Multi-Agents LLM Financial Trading Framework}, 
+@misc{xiao2025staffagentsmultiagentsllmorganizational,
+      title={StaffAgents: Multi-Agents LLM Organizational Intelligence Framework},
       author={Yijia Xiao and Edward Sun and Di Luo and Wei Wang},
       year={2025},
       eprint={2412.20138},

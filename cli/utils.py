@@ -1,21 +1,26 @@
 import questionary
 from typing import List, Optional, Tuple, Dict
 
+from rich.console import Console
+
 from cli.models import AnalystType
 
+console = Console()
+
 ANALYST_ORDER = [
-    ("Market Analyst", AnalystType.MARKET),
-    ("Social Media Analyst", AnalystType.SOCIAL),
-    ("News Analyst", AnalystType.NEWS),
-    ("Fundamentals Analyst", AnalystType.FUNDAMENTALS),
+    ("Strategic Analyst", AnalystType.STRATEGIC),
+    ("Operational Analyst", AnalystType.OPERATIONAL),
+    ("Marketing & Customer Analyst", AnalystType.MARKETING_CUSTOMER),
+    ("Risk & External Analyst", AnalystType.RISK_EXTERNAL),
 ]
 
 
 def get_ticker() -> str:
-    """Prompt the user to enter a ticker symbol."""
+    """Prompt the user to enter an organization or initiative name."""
     ticker = questionary.text(
-        "Enter the ticker symbol to analyze:",
-        validate=lambda x: len(x.strip()) > 0 or "Please enter a valid ticker symbol.",
+        "Enter the organization or initiative to analyze:",
+        validate=lambda x: len(x.strip()) > 0
+        or "Please enter a valid organization or initiative.",
         style=questionary.Style(
             [
                 ("text", "fg:green"),
@@ -25,10 +30,10 @@ def get_ticker() -> str:
     ).ask()
 
     if not ticker:
-        console.print("\n[red]No ticker symbol provided. Exiting...[/red]")
+        console.print("\n[red]No organization provided. Exiting...[/red]")
         exit(1)
 
-    return ticker.strip().upper()
+    return ticker.strip()
 
 
 def get_analysis_date() -> str:

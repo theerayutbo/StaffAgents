@@ -1,5 +1,5 @@
-from tradingagents.graph.trading_graph import TradingAgentsGraph
-from tradingagents.default_config import DEFAULT_CONFIG
+from staffagents import StaffAgentsGraph
+from staffagents.default_config import DEFAULT_CONFIG
 
 from dotenv import load_dotenv
 
@@ -24,19 +24,19 @@ config["max_debate_rounds"] = 1  # Increase debate rounds
 # ...existing code...
 '''
 
-# Configure data vendors (default uses yfinance and alpha_vantage)
+# Configure data vendors (default uses yfinance and Google/LLM-first organisational sources)
 config["data_vendors"] = {
     "core_stock_apis": "yfinance",           # Options: yfinance, alpha_vantage, local
     "technical_indicators": "yfinance",      # Options: yfinance, alpha_vantage, local
-    "fundamental_data": "alpha_vantage",     # Options: openai, alpha_vantage, local
-    "news_data": "alpha_vantage",            # Options: openai, alpha_vantage, google, local
+    "fundamental_data": "openai,alpha_vantage",     # Prefer LLM context, fall back to Alpha Vantage for finance asks
+    "news_data": "google,openai,alpha_vantage",            # Blend Google + LLM news, finance feeds only when required
 }
 
 # Initialize with custom config
-ta = TradingAgentsGraph(debug=True, config=config)
+ta = StaffAgentsGraph(debug=True, config=config)
 
 # forward propagate
-_, decision = ta.propagate("NVDA", "2025-11-04")
+_, decision = ta.propagate("Customer Experience Initiative", "2025-11-04")
 print(decision)
 
 # Memorize mistakes and reflect
