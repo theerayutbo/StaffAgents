@@ -114,18 +114,22 @@ pip install -r requirements.txt
 
 ### Required APIs
 
-You will need the OpenAI API for all the agents. An [Alpha Vantage API](https://www.alphavantage.co/support/#api-key) key is optional—StaffAgents only reaches for Alpha Vantage when a prompt explicitly requests finance-specific data, otherwise it relies on Google and LLM-sourced intelligence by default.
+StaffAgents supports multiple LLM providers out of the box. At minimum you will need credentials for the provider(s) you configure:
+
+- **OpenAI / OpenRouter / Ollama-compatible endpoints** – set `OPENAI_API_KEY`. For OpenRouter you should also set `OPENROUTER_API_KEY` and update `backend_url` accordingly.
+- **Anthropic** – set `ANTHROPIC_API_KEY`.
+- **Google (Gemini)** – set `GOOGLE_API_KEY`.
+
+Finance-specific data is optional. When available, StaffAgents automatically blends Google search and LLM-synthesised intelligence with Alpha Vantage for explicit finance requests. Set the Alpha Vantage key if you want that fallback:
 
 ```bash
-export OPENAI_API_KEY=$YOUR_OPENAI_API_KEY
+export OPENAI_API_KEY=$YOUR_OPENAI_API_KEY          # or the equivalent for your chosen provider
+export GOOGLE_API_KEY=$YOUR_GOOGLE_API_KEY          # required when llm_provider="google"
+export ANTHROPIC_API_KEY=$YOUR_ANTHROPIC_API_KEY    # required when llm_provider="anthropic"
 export ALPHA_VANTAGE_API_KEY=$YOUR_ALPHA_VANTAGE_API_KEY
 ```
 
-Alternatively, you can create a `.env` file in the project root with your API keys (see `.env.example` for reference):
-```bash
-cp .env.example .env
-# Edit .env with your actual API keys
-```
+Alternatively, you can create a `.env` file in the project root with your API keys and call `load_dotenv()` (already done inside the CLI and `main.py`).
 
 **Note:** We are happy to partner with Alpha Vantage to provide robust API support for StaffAgents. You can get a free AlphaVantage API [here](https://www.alphavantage.co/support/#api-key); StaffAgents-sourced requests also have increased rate limits to 60 requests per minute with no daily limits. In this reimagined organisational workflow, Google and LLM-synthesised sources are the primary defaults, and Alpha Vantage is consulted only when a question clearly requires financial context. You can fine-tune this behaviour via the data vendor settings in `staffagents/default_config.py`.
 
@@ -155,7 +159,7 @@ An interface will appear showing results as they load, letting you track the age
 
 ### Implementation Details
 
-We built StaffAgents with LangGraph to ensure flexibility and modularity. We utilize `o1-preview` and `gpt-4o` as our deep thinking and fast thinking LLMs for our experiments. However, for testing purposes, we recommend you use `o4-mini` and `gpt-4.1-mini` to save on costs as our framework makes **lots of** API calls.
+We built StaffAgents with LangGraph to ensure flexibility and modularity. By default the framework runs on OpenAI-compatible endpoints using `o4-mini` for deep thinking and `gpt-4o-mini` for fast thinking so the system stays responsive while keeping costs under control. You can switch to Anthropic, Google Gemini, OpenRouter, or a local Ollama endpoint by updating the configuration.
 
 ### Python Usage
 
@@ -165,6 +169,7 @@ To use StaffAgents inside your code, you can import the lightweight alias and in
 from staffagents import StaffAgentsGraph
 from staffagents.default_config import DEFAULT_CONFIG
 
+# Base usage sticks with the defaults defined in default_config.py
 ta = StaffAgentsGraph(debug=True, config=DEFAULT_CONFIG.copy())
 
 # forward propagate
@@ -172,32 +177,42 @@ _, decision = ta.propagate("Customer Experience Initiative", "2025-11-04")
 print(decision)
 ```
 
-You can also adjust the default configuration to set your own choice of LLMs, debate rounds, etc.
+You can also adjust the default configuration to set your own choice of LLMs, debate rounds, or even switch providers.
 
 ```python
 from staffagents import StaffAgentsGraph
 from staffagents.default_config import DEFAULT_CONFIG
 
-# Create a custom config
+# Create a custom config for OpenAI-compatible endpoints
 config = DEFAULT_CONFIG.copy()
-config["deep_think_llm"] = "gpt-4.1-nano"  # Use a different model
-config["quick_think_llm"] = "gpt-4.1-nano"  # Use a different model
-config["max_debate_rounds"] = 1  # Increase debate rounds
+config["deep_think_llm"] = "gpt-4o-mini"  # Swap in a different model
+config["quick_think_llm"] = "gpt-4o-mini"
+config["max_debate_rounds"] = 2
 
-# Configure data vendors (default uses yfinance with Google/LLM-first fundamentals & news)
+# Configure data vendors (defaults blend Google + LLM analysis, then fall back to finance APIs)
 config["data_vendors"] = {
-    "core_stock_apis": "yfinance",           # Options: yfinance, alpha_vantage, local
-    "technical_indicators": "yfinance",      # Options: yfinance, alpha_vantage, local
-    "fundamental_data": "openai,alpha_vantage",     # Options: openai, alpha_vantage, local
-    "news_data": "google,openai,alpha_vantage",            # Options: openai, alpha_vantage, google, local
+    "core_stock_apis": "yfinance",                 # Options: yfinance, alpha_vantage, local
+    "technical_indicators": "yfinance",            # Options: yfinance, alpha_vantage, local
+    "fundamental_data": "openai,alpha_vantage",    # Prefer LLM summaries, fall back to Alpha Vantage
+    "news_data": "google,openai,alpha_vantage",    # Start with Google + LLM context
 }
 
-# Initialize with custom config
 ta = StaffAgentsGraph(debug=True, config=config)
 
 # forward propagate
 _, decision = ta.propagate("Customer Experience Initiative", "2025-11-04")
 print(decision)
+```
+
+Switching to Gemini is equally straightforward—just point the provider to `google` and provide the Gemini models you want to use.
+
+```python
+config = DEFAULT_CONFIG.copy()
+config["llm_provider"] = "google"
+config["deep_think_llm"] = "gemini-1.5-pro"
+config["quick_think_llm"] = "gemini-1.5-flash"
+
+ta = StaffAgentsGraph(debug=True, config=config)
 ```
 
 > The default configuration uses yfinance for stock price and technical data, combines Google search with LLM synthesis for fundamental and news analysis, and falls back to Alpha Vantage only when finance-specific answers are requested. For production use or if you encounter rate limits, consider upgrading to [Alpha Vantage Premium](https://www.alphavantage.co/premium/) for more stable and reliable data access. For offline experimentation, there's a local data vendor option that uses our **Tauric TradingDB**, a curated dataset for backtesting, though this is still in development. We're currently refining this dataset and plan to release it soon alongside our upcoming projects. Stay tuned!
