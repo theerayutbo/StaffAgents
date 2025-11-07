@@ -1,59 +1,15 @@
-<p align="center">
-  <img src="assets/TauricResearch.png" style="width: 60%; height: auto;">
-</p>
-
-<div align="center" style="line-height: 1;">
-  <a href="https://arxiv.org/abs/2412.20138" target="_blank"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2412.20138-B31B1B?logo=arxiv"/></a>
-  <a href="https://discord.com/invite/hk9PGKShPK" target="_blank"><img alt="Discord" src="https://img.shields.io/badge/Discord-TradingResearch-7289da?logo=discord&logoColor=white&color=7289da"/></a>
-  <a href="./assets/wechat.png" target="_blank"><img alt="WeChat" src="https://img.shields.io/badge/WeChat-TauricResearch-brightgreen?logo=wechat&logoColor=white"/></a>
-  <a href="https://x.com/TauricResearch" target="_blank"><img alt="X Follow" src="https://img.shields.io/badge/X-TauricResearch-white?logo=x&logoColor=white"/></a>
-  <br>
-  <a href="https://github.com/TauricResearch/" target="_blank"><img alt="Community" src="https://img.shields.io/badge/Join_GitHub_Community-TauricResearch-14C290?logo=discourse"/></a>
-</div>
-
-<div align="center">
-  <!-- Keep these links. Translations will automatically update with the README. -->
-  <a href="https://www.readme-i18n.com/TauricResearch/StaffAgents?lang=de">Deutsch</a> |
-  <a href="https://www.readme-i18n.com/TauricResearch/StaffAgents?lang=es">Español</a> |
-  <a href="https://www.readme-i18n.com/TauricResearch/StaffAgents?lang=fr">français</a> |
-  <a href="https://www.readme-i18n.com/TauricResearch/StaffAgents?lang=ja">日本語</a> |
-  <a href="https://www.readme-i18n.com/TauricResearch/StaffAgents?lang=ko">한국어</a> |
-  <a href="https://www.readme-i18n.com/TauricResearch/StaffAgents?lang=pt">Português</a> |
-  <a href="https://www.readme-i18n.com/TauricResearch/StaffAgents?lang=ru">Русский</a> |
-  <a href="https://www.readme-i18n.com/TauricResearch/StaffAgents?lang=zh">中文</a>
-</div>
-
----
-
+````markdown
 # StaffAgents: Multi-Agents LLM Organizational Intelligence Framework
 
-> 🎉 **StaffAgents** officially released! We have received numerous inquiries about the work, and we would like to express our thanks for the enthusiasm in our community.
+> StaffAgents officially released! We have received numerous inquiries about the work, and we would like to express our thanks for the enthusiasm in our community.
 >
 > So we decided to fully open-source the framework. Looking forward to building impactful projects with you!
 
-<div align="center">
-<a href="https://www.star-history.com/#TauricResearch/StaffAgents&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=TauricResearch/StaffAgents&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=TauricResearch/StaffAgents&type=Date" />
-   <img alt="StaffAgents Star History" src="https://api.star-history.com/svg?repos=TauricResearch/StaffAgents&type=Date" style="width: 80%; height: auto;" />
- </picture>
-</a>
-</div>
-
-<div align="center">
-
 🚀 [StaffAgents](#staffagents-framework) | ⚡ [Installation & CLI](#installation-and-cli) | 🎬 [Demo](https://www.youtube.com/watch?v=90gr5lwjIho) | 📦 [Package Usage](#staffagents-package) | 🤝 [Contributing](#contributing) | 📄 [Citation](#citation)
-
-</div>
 
 ## StaffAgents Framework
 
 StaffAgents is a multi-agent collaboration framework that mirrors the dynamics of real-world strategic planning teams. By deploying specialized LLM-powered analysts—from strategic planners and operational reviewers to marketing specialists and risk scouts—the platform collaboratively evaluates organizational context and surfaces coordinated recommendations. Moreover, these agents engage in dynamic discussions to pinpoint the optimal course of action for leadership.
-
-<p align="center">
-  <img src="assets/schema.png" style="width: 100%; height: auto;">
-</p>
 
 > StaffAgents framework is designed for research purposes. Outcomes may vary based on the chosen backbone language models, model temperature, time horizons, the quality of data, and other non-deterministic factors. Adapt the framework to your internal review policies before using it in production environments.
 
@@ -65,31 +21,15 @@ Our framework decomposes complex organizational questions into specialized roles
 - **Marketing & Customer Analyst**: Aggregates sentiment, feedback, and market conversations to surface customer-centric insights.
 - **Risk & External Analyst**: Tracks regulatory shifts, partner ecosystems, and macro trends to flag external risks and opportunities.
 
-<p align="center">
-  <img src="assets/analyst.png" width="100%" style="display: inline-block; margin: 0 2%;">
-</p>
-
 ### Researcher Team
 - Comprises both bullish and bearish researchers who critically assess the insights provided by the Analyst Team. Through structured debates, they balance potential gains against inherent risks.
-
-<p align="center">
-  <img src="assets/researcher.png" width="70%" style="display: inline-block; margin: 0 2%;">
-</p>
 
 ### Staff Coordinator Agent
 - Composes reports from the analysts and researchers to craft unified action plans. It aligns stakeholders on next steps based on comprehensive organizational intelligence.
 
-<p align="center">
-  <img src="assets/trader.png" width="70%" style="display: inline-block; margin: 0 2%;">
-</p>
-
 ### Risk Management and Executive Review
 - Continuously evaluates operational risk by assessing volatility in key metrics, stakeholder sentiment, and external dependencies. The risk management team refines proposed actions before they move forward.
 - The Executive Review function approves or redirects the coordination plan. When approved, recommendations become ready for implementation.
-
-<p align="center">
-  <img src="assets/risk.png" width="70%" style="display: inline-block; margin: 0 2%;">
-</p>
 
 ## Installation and CLI
 
@@ -97,17 +37,19 @@ Our framework decomposes complex organizational questions into specialized roles
 
 Clone StaffAgents:
 ```bash
-git clone https://github.com/TauricResearch/StaffAgents.git
+git clone [https://github.com/theerayutbo/StaffAgents.git](https://github.com/theerayutbo/StaffAgents.git)
 cd StaffAgents
-```
+````
 
 Create a virtual environment in any of your favorite environment managers:
+
 ```bash
 conda create -n staffagents python=3.13
 conda activate staffagents
 ```
 
 Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -122,34 +64,25 @@ export ALPHA_VANTAGE_API_KEY=$YOUR_ALPHA_VANTAGE_API_KEY
 ```
 
 Alternatively, you can create a `.env` file in the project root with your API keys (see `.env.example` for reference):
+
 ```bash
 cp .env.example .env
 # Edit .env with your actual API keys
 ```
 
-**Note:** We are happy to partner with Alpha Vantage to provide robust API support for StaffAgents. You can get a free AlphaVantage API [here](https://www.alphavantage.co/support/#api-key); StaffAgents-sourced requests also have increased rate limits to 60 requests per minute with no daily limits. In this reimagined organisational workflow, Google and LLM-synthesised sources are the primary defaults, and Alpha Vantage is consulted only when a question clearly requires financial context. You can fine-tune this behaviour via the data vendor settings in `staffagents/default_config.py`.
+**Note:** We are happy to partner with Alpha Vantage to provide robust API support for StaffAgents. You can get a free AlphaVANTAGE API [here](https://www.alphavantage.co/support/#api-key); StaffAgents-sourced requests also have increased rate limits to 60 requests per minute with no daily limits. In this reimagined organisational workflow, Google and LLM-synthesised sources are the primary defaults, and Alpha Vantage is consulted only when a question clearly requires financial context. You can fine-tune this behaviour via the data vendor settings in `staffagents/default_config.py`.
 
 ### CLI Usage
 
 You can also try out the CLI directly by running:
+
 ```bash
 python -m cli.main
 ```
+
 You will see a screen where you can select your desired tickers, date, LLMs, research depth, etc.
 
-<p align="center">
-  <img src="assets/cli/cli_init.png" width="100%" style="display: inline-block; margin: 0 2%;">
-</p>
-
 An interface will appear showing results as they load, letting you track the agent's progress as it runs.
-
-<p align="center">
-  <img src="assets/cli/cli_news.png" width="100%" style="display: inline-block; margin: 0 2%;">
-</p>
-
-<p align="center">
-  <img src="assets/cli/cli_transaction.png" width="100%" style="display: inline-block; margin: 0 2%;">
-</p>
 
 ## StaffAgents Package
 
@@ -186,10 +119,10 @@ config["max_debate_rounds"] = 1  # Increase debate rounds
 
 # Configure data vendors (default uses yfinance with Google/LLM-first fundamentals & news)
 config["data_vendors"] = {
-    "core_stock_apis": "yfinance",           # Options: yfinance, alpha_vantage, local
+    "core_stock_apis": "yfinance",          # Options: yfinance, alpha_vantage, local
     "technical_indicators": "yfinance",      # Options: yfinance, alpha_vantage, local
-    "fundamental_data": "openai,alpha_vantage",     # Options: openai, alpha_vantage, local
-    "news_data": "google,openai,alpha_vantage",            # Options: openai, alpha_vantage, google, local
+    "fundamental_data": "openai,alpha_vantage",      # Options: openai, alpha_vantage, local
+    "news_data": "google,openai,alpha_vantage",        # Options: openai, alpha_vantage, google, local
 }
 
 # Initialize with custom config
@@ -200,21 +133,21 @@ _, decision = ta.propagate("Customer Experience Initiative", "2025-11-04")
 print(decision)
 ```
 
-> The default configuration uses yfinance for stock price and technical data, combines Google search with LLM synthesis for fundamental and news analysis, and falls back to Alpha Vantage only when finance-specific answers are requested. For production use or if you encounter rate limits, consider upgrading to [Alpha Vantage Premium](https://www.alphavantage.co/premium/) for more stable and reliable data access. For offline experimentation, there's a local data vendor option that uses our **Tauric TradingDB**, a curated dataset for backtesting, though this is still in development. We're currently refining this dataset and plan to release it soon alongside our upcoming projects. Stay tuned!
+> The default configuration uses yfinance for stock price and technical data, combines Google search with LLM synthesis for fundamental and news analysis, and falls back to Alpha Vantage only when finance-specific answers are requested. For production use or if you encounter rate limits, consider upgrading to [Alpha Vantage Premium](https://www.alphavantage.co/premium/) for more stable and reliable data access. For offline experimentation, there's a local data vendor option that uses our **Tauric TradingDB**, a curated dataset for backtesting, though this is still in development. We're currently refining this dataset and plan to release it soon alongside our upcoming projects. Stay tuned\!
 
 You can view the full list of configurations in `staffagents/default_config.py`.
 
 ## Contributing
 
-We welcome contributions from the community! Whether it's fixing a bug, improving documentation, or suggesting a new feature, your input helps make this project better. If you are interested in this line of research, please consider joining our open-source financial AI research community [Tauric Research](https://tauric.ai/).
+This project I get inspiration from the projecy of the open-source financial AI research community [Tauric Research](https://tauric.ai/).
 
 ## Citation
 
-Please reference our work if you find *StaffAgents* provides you with some help :)
+This project is inspired by and builds upon the framework presented in the original **tradingagents** paper. If you find the code in this repository helpful, please cite the original authors' work:
 
 ```
-@misc{xiao2025staffagentsmultiagentsllmorganizational,
-      title={StaffAgents: Multi-Agents LLM Organizational Intelligence Framework},
+@misc{xiao2025tradingagentsmultiagentsllmfinancial,
+      title={TradingAgents: Multi-Agents LLM Financial Trading Framework}, 
       author={Yijia Xiao and Edward Sun and Di Luo and Wei Wang},
       year={2025},
       eprint={2412.20138},
